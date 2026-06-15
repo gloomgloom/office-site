@@ -186,7 +186,7 @@ header {
 
 /* STRIP */
 .strip {
-  flex-shrink: 0; height: clamp(200px, 25vh, 320px);
+  flex-shrink: 0; height: calc(20vw + 32px);
   border-top: 0.5px solid var(--line);
   display: grid; grid-template-columns: repeat(5, 1fr);
   background: var(--bg); z-index: 10;
@@ -206,9 +206,9 @@ header {
   z-index: 3; transform-origin: center;
 }
 .thumb.active::before, .thumb:hover::before { transform: scaleX(1); }
-.thumb-img-wrap { flex: 1; overflow: hidden; min-height: 0; background: #111110; }
+.thumb-img-wrap { flex: 1; overflow: hidden; min-height: 0; }
 .thumb-img-wrap img {
-  width: 100%; height: 100%; object-fit: contain; object-position: center bottom; display: block;
+  width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;
   filter: grayscale(40%) brightness(0.7); transition: filter 0.3s, transform 0.3s;
 }
 .thumb:hover .thumb-img-wrap img { filter: grayscale(10%) brightness(0.85); transform: scale(1.04); }
@@ -248,7 +248,7 @@ header {
 
 /* ── TABLET ── */
 @media (min-width: 601px) and (max-width: 900px) {
-  .strip { height: clamp(130px, 20vh, 200px); }
+  .strip { height: calc(20vw + 26px); }
   .thumb-foot { height: 28px; }
   .panel-head { padding: 12px 20px 10px; }
   .panel-data { padding: 8px 20px 10px; }
