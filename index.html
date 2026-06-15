@@ -186,7 +186,7 @@ header {
 
 /* STRIP */
 .strip {
-  flex-shrink: 0; height: 200px;
+  flex-shrink: 0; height: clamp(200px, 25vh, 320px);
   border-top: 0.5px solid var(--line);
   display: grid; grid-template-columns: repeat(5, 1fr);
   background: var(--bg); z-index: 10;
@@ -241,14 +241,14 @@ header {
 
   .close-btn { top: 8px; right: 12px; font-size: 9px; padding: 5px 11px; }
   .key-hint { display: none; }
-  .strip { height: 100px; }
+  .strip { height: clamp(110px, 18vh, 160px); }
   .thumb-foot { height: 26px; }
   .thumb-num { font-size: 9px; }
 }
 
 /* ── TABLET ── */
 @media (min-width: 601px) and (max-width: 900px) {
-  .strip { height: 140px; }
+  .strip { height: clamp(130px, 20vh, 200px); }
   .thumb-foot { height: 28px; }
   .panel-head { padding: 12px 20px 10px; }
   .panel-data { padding: 8px 20px 10px; }
