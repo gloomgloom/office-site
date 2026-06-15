@@ -206,9 +206,9 @@ header {
   z-index: 3; transform-origin: center;
 }
 .thumb.active::before, .thumb:hover::before { transform: scaleX(1); }
-.thumb-img-wrap { flex: 1; overflow: hidden; min-height: 0; }
+.thumb-img-wrap { flex: 1; overflow: hidden; min-height: 0; background: #111110; }
 .thumb-img-wrap img {
-  width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block;
+  width: 100%; height: 100%; object-fit: contain; object-position: center bottom; display: block;
   filter: grayscale(40%) brightness(0.7); transition: filter 0.3s, transform 0.3s;
 }
 .thumb:hover .thumb-img-wrap img { filter: grayscale(10%) brightness(0.85); transform: scale(1.04); }
