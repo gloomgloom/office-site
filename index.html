@@ -165,10 +165,11 @@ header {
 
 /* CLOSE */
 .close-btn {
-  position: absolute; top: 0; right: 0; height: 48px; z-index: 20; border-left: 0.5px solid var(--line2); border-bottom: 0.5px solid var(--line2);
-  background: transparent; border: 0.5px solid var(--line2); color: var(--muted);
+  position: fixed; bottom: calc(20vw + 58px); right: 12px; height: 36px; z-index: 30;
+  background: rgba(12,12,11,0.85); backdrop-filter: blur(8px);
+  border: 0.5px solid var(--line2); color: var(--muted);
   font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
-  padding: 0 20px; cursor: pointer;
+  padding: 0 16px; cursor: pointer;
   transition: border-color 0.2s, color 0.2s; display: none;
   -webkit-tap-highlight-color: transparent;
 }
@@ -224,6 +225,8 @@ header {
 
 /* ── MOBILE ── */
 @media (max-width: 600px) {
+  .panel-img-wrap img { width: 100%; height: auto; max-height: none; }
+  .panel-img-wrap { align-items: flex-start; }
   header { padding: 0 16px; height: 44px; }
   .logo-sub { display: none; }
 
