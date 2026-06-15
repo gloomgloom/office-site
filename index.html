@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ÐÑÐ¸ÑÐ½ÑÐ¹ ÑÐµÐ½ÑÑ â ÐÐ°ÑÐ¸Ð°Ð½ÑÑ Ð¼Ð°ÑÑÐ¸Ð½Ð³Ð°</title>
+<title>Офисный центр — Варианты массинга</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
@@ -83,7 +83,7 @@ header {
 .empty-line { width: 0.5px; height: 48px; background: var(--line2); }
 .empty-text { font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
 
-/* ââ PANELS ââ */
+/* ── PANELS ── */
 .panels {
   position: absolute; inset: 0; z-index: 5;
   display: grid;
@@ -138,7 +138,7 @@ header {
 .panel-img-wrap img.entering { opacity: 0; transform: scale(0.97) translateY(8px); }
 .panel-img-wrap img.entered  { opacity: 1; transform: scale(1) translateY(0); }
 
-/* DATA STRIP â only under axo panel */
+/* DATA STRIP — only under axo panel */
 .panel-data {
   flex-shrink: 0;
   border-top: 0.5px solid var(--line);
@@ -222,7 +222,7 @@ header {
 .thumb-num { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); transition: color 0.2s; }
 .thumb:hover .thumb-num, .thumb.active .thumb-num { color: var(--accent); }
 
-/* ââ MOBILE ââ */
+/* ── MOBILE ── */
 @media (max-width: 600px) {
   header { padding: 0 16px; height: 44px; }
   .logo-sub { display: none; }
@@ -232,8 +232,7 @@ header {
   .divider-h { display: block; }
 
   .panel-head { padding: 10px 16px 8px; }
-  .panel-img-wrap { overflow-y: auto; min-height: 0; }
-  .panel-img-wrap img { width: 100%; height: auto; max-height: none; object-fit: unset; }
+  .panel-img-wrap img { width: 100%; height: auto; max-height: 45vh; object-fit: contain; object-position: top center; }
   .panel-num { font-size: 16px; }
   .panel-data { padding: 8px 16px 10px; }
   .data-grid { grid-template-columns: repeat(2, 1fr); gap: 4px 10px; }
@@ -241,14 +240,14 @@ header {
   .data-label { font-size: 8px; }
   .data-total .data-value { font-size: 13px; }
 
-  .close-btn { position: fixed; bottom: calc(20vw + 28px); right: 10px; top: auto; height: 30px; padding: 0 12px; font-size: 9px; background: rgba(14,14,11,0.92); border: 0.5px solid var(--line2); }
+  .close-btn { position: fixed; bottom: calc(20vw + 30px); right: 10px; top: auto; height: 30px; padding: 0 12px; font-size: 9px; background: rgba(12,12,11,0.9); border: 0.5px solid var(--line2); color: var(--muted); }
   .key-hint { display: none; }
   .strip { height: 100px; }
   .thumb-foot { height: 26px; }
   .thumb-num { font-size: 9px; }
 }
 
-/* ââ TABLET ââ */
+/* ── TABLET ── */
 @media (min-width: 601px) and (max-width: 900px) {
   .strip { height: 140px; }
   .thumb-foot { height: 28px; }
@@ -262,10 +261,10 @@ header {
 <div class="app">
   <header>
     <div>
-      <span class="logo-title">ÐÑÐ¸ÑÐ½ÑÐ¹ ÑÐµÐ½ÑÑ</span>
-      <span class="logo-sub">ÐÐ°ÑÐ¸Ð°Ð½ÑÑ Ð¼Ð°ÑÑÐ¸Ð½Ð³Ð°</span>
+      <span class="logo-title">Офисный центр</span>
+      <span class="logo-sub">Варианты массинга</span>
     </div>
-    <div class="header-right">5 Ð²Ð°ÑÐ¸Ð°Ð½ÑÐ¾Ð²</div>
+    <div class="header-right">5 вариантов</div>
   </header>
 
   <div class="stage" id="stage">
@@ -280,7 +279,7 @@ header {
 
     <div class="empty" id="empty">
       <div class="empty-line"></div>
-      <span class="empty-text">ÐÑÐ±ÐµÑÐ¸ÑÐµ Ð²Ð°ÑÐ¸Ð°Ð½Ñ</span>
+      <span class="empty-text">Выберите вариант</span>
       <div class="empty-line"></div>
     </div>
 
@@ -288,17 +287,17 @@ header {
       <!-- AXO PANEL -->
       <div class="panel">
         <div class="panel-head">
-          <span class="panel-label">ÐÐºÑÐ¾Ð½Ð¾Ð¼ÐµÑÑÐ¸Ñ</span>
+          <span class="panel-label">Аксонометрия</span>
           <span class="panel-num" id="numLeft"></span>
         </div>
         <div class="panel-body">
           <div class="panel-img-wrap">
-            <img id="imgAxo" src="" alt="ÐÐºÑÐ¾Ð½Ð¾Ð¼ÐµÑÑÐ¸Ñ" class="entering">
+            <img id="imgAxo" src="" alt="Аксонометрия" class="entering">
           </div>
           <div class="panel-data" id="panelData">
             <div class="data-grid" id="dataGrid"></div>
             <div class="data-total">
-              <span class="data-label">ÐÐ±ÑÐ°Ñ Ð¿Ð¾ÑÑÐ°Ð¶Ð½Ð°Ñ Ð¿Ð»Ð¾ÑÐ°Ð´Ñ</span>
+              <span class="data-label">Общая поэтажная площадь</span>
               <span class="data-value" id="dataTotal"></span>
             </div>
           </div>
@@ -311,21 +310,21 @@ header {
       <!-- RENDER PANEL -->
       <div class="panel">
         <div class="panel-head">
-          <span class="panel-label">ÐÐ¸Ð·ÑÐ°Ð»Ð¸Ð·Ð°ÑÐ¸Ñ</span>
+          <span class="panel-label">Визуализация</span>
           <span class="panel-num" id="numRight"></span>
         </div>
         <div class="panel-body">
           <div class="panel-img-wrap">
-            <img id="imgRender" src="" alt="ÐÐ¸Ð·ÑÐ°Ð»Ð¸Ð·Ð°ÑÐ¸Ñ" class="entering">
+            <img id="imgRender" src="" alt="Визуализация" class="entering">
           </div>
         </div>
       </div>
     </div>
 
-    <button class="close-btn" id="closeBtn" onclick="closeView()">ÐÐ°ÐºÑÑÑÑ</button>
+    <button class="close-btn" id="closeBtn" onclick="closeView()">Закрыть</button>
     <div class="key-hint" id="keyHint">
-      <span class="key-tag"><span class="key">â</span> Ð¿ÑÐµÐ´.</span>
-      <span class="key-tag">ÑÐ»ÐµÐ´. <span class="key">â</span></span>
+      <span class="key-tag"><span class="key">←</span> пред.</span>
+      <span class="key-tag">след. <span class="key">→</span></span>
     </div>
   </div>
 
@@ -357,49 +356,49 @@ header {
 var current = null;
 var animT = null;
 
-/* ââ ÐÐÐÐÐ«Ð Ð¸Ð· Ð°ÐºÑÐ¾Ð½Ð¾Ð¼ÐµÑÑÐ¸Ð¸ ââ */
+/* ── ДАННЫЕ из аксонометрии ── */
 var DATA = {
   1: {
     floors: [
-      { label: 'ÐÐ¾ÑÐ¿ÑÑ 1', val: '21 ÑÑ. Â· 19 400 Ð¼Â²' },
-      { label: 'ÐÐ¾ÑÐ¿ÑÑ 2', val: '18 ÑÑ. Â· 12 000 Ð¼Â²' },
-      { label: 'ÐÐ¾ÑÐ¿ÑÑ 3', val: '25 ÑÑ. Â· 18 000 Ð¼Â²' },
-      { label: 'Ð¡ÑÐ¸Ð»Ð¾Ð±Ð°Ñ', val: '9 600 Ð¼Â²' },
+      { label: 'Корпус 1', val: '21 эт. · 19 400 м²' },
+      { label: 'Корпус 2', val: '18 эт. · 12 000 м²' },
+      { label: 'Корпус 3', val: '25 эт. · 18 000 м²' },
+      { label: 'Стилобат', val: '9 600 м²' },
     ],
-    total: '50 000 Ð¼Â²'
+    total: '50 000 м²'
   },
   2: {
     floors: [
-      { label: 'ÐÐ¾ÑÐ¿ÑÑ 1', val: '32 ÑÑ.' },
-      { label: 'ÐÐ¾ÑÐ¿ÑÑ 2', val: '28 ÑÑ.' },
-      { label: 'Ð¡ÑÐ¸Ð»Ð¾Ð±Ð°Ñ', val: 'Ð¾Ð±ÑÐ¸Ð¹' },
+      { label: 'Корпус 1', val: '32 эт.' },
+      { label: 'Корпус 2', val: '28 эт.' },
+      { label: 'Стилобат', val: 'общий' },
     ],
-    total: '~50 000 Ð¼Â²'
+    total: '~50 000 м²'
   },
   3: {
     floors: [
-      { label: 'ÐÐ¾ÑÐ¿ÑÑ 1', val: '35 ÑÑ.' },
-      { label: 'ÐÐ¾ÑÐ¿ÑÑ 2', val: '18 ÑÑ.' },
-      { label: 'Ð¡ÑÐ¸Ð»Ð¾Ð±Ð°Ñ', val: 'Ð¾Ð±ÑÐ¸Ð¹' },
+      { label: 'Корпус 1', val: '35 эт.' },
+      { label: 'Корпус 2', val: '18 эт.' },
+      { label: 'Стилобат', val: 'общий' },
     ],
-    total: '~50 000 Ð¼Â²'
+    total: '~50 000 м²'
   },
   4: {
     floors: [
-      { label: 'ÐÐ¾ÑÐ¿ÑÑ 1', val: '30 ÑÑ.' },
-      { label: 'ÐÐ¾ÑÐ¿ÑÑ 2', val: '30 ÑÑ.' },
-      { label: 'Ð¡ÑÐ¸Ð»Ð¾Ð±Ð°Ñ', val: 'Ð¾Ð±ÑÐ¸Ð¹' },
+      { label: 'Корпус 1', val: '30 эт.' },
+      { label: 'Корпус 2', val: '30 эт.' },
+      { label: 'Стилобат', val: 'общий' },
     ],
-    total: '~50 000 Ð¼Â²'
+    total: '~50 000 м²'
   },
   5: {
     floors: [
-      { label: 'ÐÐ¾ÑÐ¿ÑÑ 1', val: '21 ÑÑ. Â· 16 000 Ð¼Â²' },
-      { label: 'ÐÐ¾ÑÐ¿ÑÑ 2', val: '16 ÑÑ. Â· 13 000 Ð¼Â²' },
-      { label: 'ÐÐ¾ÑÐ¿ÑÑ 3', val: '25 ÑÑ. Â· 19 000 Ð¼Â²' },
-      { label: 'Ð¡ÑÐ¸Ð»Ð¾Ð±Ð°Ñ', val: '9 000 Ð¼Â²' },
+      { label: 'Корпус 1', val: '21 эт. · 16 000 м²' },
+      { label: 'Корпус 2', val: '16 эт. · 13 000 м²' },
+      { label: 'Корпус 3', val: '25 эт. · 19 000 м²' },
+      { label: 'Стилобат', val: '9 000 м²' },
     ],
-    total: '50 000 Ð¼Â²'
+    total: '50 000 м²'
   }
 };
 
